@@ -101,13 +101,15 @@ SERVICE_NAME: orcl.cs.cityu.edu.hk
                 }
             }
         }
-        print "The order is NOT successful<br>";
+        print "The order is NOT successful!<br>";
         showTable($conn, $houseid);
     }
-
-    //clearAll($conn);
-    print "Welcome ".$_GET["name"]."<br>\n";
-    print "Your email address is: ".$_GET["email"]."<br>\n"; 
+    
+    if($_GET["clear"]==1){
+        clearAll($conn);
+    }
+    print "Welcome, ".$_GET["name"]."!<br>\n";
+    print "Your email address is: ".$_GET["email"].".<br>\n"; 
     $ticketnum = $_GET["ticketnum"];
     $house = $_GET["house"];
     print "Your order is: Order ".$ticketnum." tickets in House ".$house."<br>\n";

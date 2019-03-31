@@ -1,10 +1,22 @@
 <html>
 <body>
 <form action="assignment1.php" method="get">
-    House: <input type="text" name="house"><br>
-    Ticket number: <input type="text" name="ticketnum"><br>
-    Name: <input type="text" name="name"><br>
-    E-mail: <input type="text" name="email"><br>
+    House:<br> 
+    <select name="house">
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="E">E</option>
+    </select>
+    <br>
+    Ticket number (between 1 and 10):<br> 
+    <input type="number" name="ticketnum" min="1" max="10"> <br>
+    Name:<br> <input type="text" name="name"><br>
+    E-mail:<br> <input type="text" name="email"><br>
+    Clear(just for test, if choose yes, all seats will be available before the order): <br>
+    <input type="radio" name="clear" value=1 checked> Yes <br>
+    <input type="radio" name="clear" value=0> no <br>
     <input type="submit">
 </form>
 
